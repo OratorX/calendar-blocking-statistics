@@ -4,22 +4,22 @@
       Need login first
     </div>
     <form @submit.prevent="onSubmit()">
-      <h1>Login page</h1>
+      <h1>Logout page</h1>
       <p>
         <nuxt-link to="/">To home page</nuxt-link>
       </p>
-      <button class="btn btn-primary" type="submit">Login</button>
+      <button class="btn btn-primary" type="submit">Logout</button>
     </form>
   </section>
 </template>
 
 <script>
 export default {
-  name: "LoginPage",
+  name: "LogoutPage",
   layout: "empty",
   methods: {
     onSubmit() {
-      this.$auth.loginWith("google");
+      this.$auth.logout();
       this.$router.push("/");
     },
   },

@@ -15,13 +15,18 @@
             </nuxt-link>
           </li>
           <li class="nav-item">
-            <nuxt-link active-class="active" class="nav-link" to="/users">
-              Users
+            <nuxt-link active-class="active" class="nav-link" to="/login">
+              Login
             </nuxt-link>
           </li>
           <li class="nav-item">
-            <nuxt-link active-class="active" class="nav-link" to="/login">
-              Login
+            <nuxt-link active-class="active" class="nav-link" to="/logout">
+              Logout
+            </nuxt-link>
+          </li>
+          <li class="nav-item">
+            <nuxt-link active-class="active" class="nav-link" to="/calendar">
+              Calendar
             </nuxt-link>
           </li>
         </ul>
@@ -42,12 +47,6 @@
 <script>
 export default {
   name: "NavbarComponent",
-  methods: {
-    logout() {
-      this.$store.dispatch("logout");
-      this.$router.push("/login");
-    },
-  },
 };
 </script>
 

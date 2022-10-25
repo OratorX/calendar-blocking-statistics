@@ -34,7 +34,32 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ["@nuxtjs/axios", "@nuxtjs/auth-next"],
+
+  //Authentication
+  auth: {
+    strategies: {
+      google: {
+        clientId:
+          "220477538628-jcl03pt7phagplt70roh1g8ejdvfo0sa.apps.googleusercontent.com",
+        codeChallengeMethod: "",
+        responseType: "token id_token",
+        endpoints: {
+          token: "http://localhost:3000/user/google/", // some backend url to resolve your auth with google and give you the token back
+          logout: "http://localhost:3000/logout",
+        },
+        token: {
+          property: "access_token",
+          type: "Bearer",
+          maxAge: 1800,
+        },
+        refreshToken: {
+          property: "refresh_token",
+          maxAge: 60 * 60 * 24 * 30,
+        },
+      },
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
