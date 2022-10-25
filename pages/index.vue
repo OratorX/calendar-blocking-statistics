@@ -1,11 +1,8 @@
-<template>
-  <Tutorial />
-</template>
+<template><div>Hi</div></template>
 
 <script>
 export default {
   name: "IndexPage",
   xxx: null,
-  xxxz: 1,
 };
 </script>
