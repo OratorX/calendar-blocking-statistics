@@ -15,17 +15,32 @@
             </nuxt-link>
           </li>
           <li class="nav-item">
-            <nuxt-link active-class="active" class="nav-link" to="/login">
+            <nuxt-link
+              v-if="!$auth.user"
+              active-class="active"
+              class="nav-link"
+              to="/login"
+            >
               Login
             </nuxt-link>
           </li>
           <li class="nav-item">
-            <nuxt-link active-class="active" class="nav-link" to="/logout">
+            <nuxt-link
+              v-if="$auth.user"
+              active-class="active"
+              class="nav-link"
+              to="/logout"
+            >
               Logout
             </nuxt-link>
           </li>
           <li class="nav-item">
-            <nuxt-link active-class="active" class="nav-link" to="/calendar">
+            <nuxt-link
+              v-if="$auth.user"
+              active-class="active"
+              class="nav-link"
+              to="/calendar"
+            >
               Calendar
             </nuxt-link>
           </li>
