@@ -34,7 +34,11 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/axios", "@nuxtjs/auth"],
+  modules: ["@nuxtjs/axios", "@nuxtjs/auth-next"],
+
+  axios: {
+    baseURL: "/",
+  },
 
   //Authentication
   auth: {
