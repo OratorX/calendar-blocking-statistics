@@ -44,7 +44,7 @@ export default {
   auth: {
     strategies: {
       google: {
-        client_id:
+        clientId:
           "220477538628-jcl03pt7phagplt70roh1g8ejdvfo0sa.apps.googleusercontent.com",
         codeChallengeMethod: "",
         responseType: "token id_token",
