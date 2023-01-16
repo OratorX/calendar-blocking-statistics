@@ -10,7 +10,7 @@
     <section v-if="calendarsExist">
       <ul>
         <li v-for="calendar in calendars" :key="calendar.id">
-          {{ calendar.summary }}
+          {{ calendar.name }}
         </li>
       </ul>
     </section>
@@ -38,7 +38,7 @@ export default {
     },
     async fetchAllCalendarIds() {
       await this.$axios.$get("calendars").then((response) => {
-        this.calendars = response.items;
+        this.calendars = response;
       });
       console.log(this.calendars);
     },
