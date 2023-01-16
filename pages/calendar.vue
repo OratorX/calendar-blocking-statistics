@@ -37,11 +37,9 @@ export default {
       console.log(this.$auth.user.name);
     },
     async fetchAllCalendarIds() {
-      await this.$axios
-        .$get("https://www.googleapis.com/calendar/v3/users/me/calendarList")
-        .then((response) => {
-          this.calendars = response.items;
-        });
+      await this.$axios.$get("calendars").then((response) => {
+        this.calendars = response.items;
+      });
       console.log(this.calendars);
     },
   },

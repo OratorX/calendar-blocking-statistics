@@ -2,6 +2,10 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,
 
+  server: {
+    port: 8010,
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "calendar-blocking-statistics",
@@ -37,7 +41,7 @@ export default {
   modules: ["@nuxtjs/axios", "@nuxtjs/auth-next"],
 
   axios: {
-    baseURL: "/",
+    baseURL: "http://127.0.0.1:8011",
   },
 
   //Authentication
